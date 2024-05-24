@@ -1,0 +1,47 @@
+<html>
+<head>
+    <title>Voting Website</title>
+    
+</head>
+<body>
+
+<!-- Step 1: Registration/Login Page -->
+<div id="registration">
+    <h2>Registration/Login</h2>
+    <input type="text" id="name" placeholder="Name"><br>
+    <input type="text" id="phone" placeholder="Phone Number"><br>
+    <input type="email" id="email" placeholder="Email"><br>
+    <button onclick="registerOrLogin()">Register/Login</button>
+    <br><br>
+    <input type="text" id="username" placeholder="Username (if already registered)">
+    <input type="password" id="password" placeholder="Password (if already registered)">
+</div>
+
+<!-- Step 2: Capture Aadhar and Voter ID -->
+<div id="step2" style="display: none;">
+    <h2>Step 2: Capture Aadhar and Voter ID</h2>
+    <input type="text" id="aadhar" placeholder="Enter Aadhar Card Number"><br>
+    <input type="text" id="voterID" placeholder="Enter Voter ID Number"><br>
+    <button onclick="captureImage()">Capture Image</button>
+</div>
+
+<!-- Step 3: Party Selection -->
+<div id="step3" style="display: none;">
+    <h2>Step 3: Party Selection</h2>
+    <form id="partyForm">
+        <input type="radio" name="party" value="BJP"> BJP<br>
+        <input type="radio" name="party" value="TDP"> TDP<br>
+        <input type="radio" name="party" value="JSP"> JSP<br>
+        <input type="radio" name="party" value="YSRCP"> YSRCP<br>
+    </form>
+    <button onclick="submitVote()">Submit Vote</button>
+</div>
+
+<!-- Results -->
+<div id="results" style="display: none;">
+    <h2>Results</h2>
+    <p>BJP Votes: <span id="bjpVotes">0</span></p>
+    <p>TDP Votes: <span id="tdpVotes">0</span></p>
+    <p>JSP Votes: <span id="jspVotes">0</span></p>
+    <p>YSRCP Votes: <span id="ysrcpVotes">0</span></p>
+</div>
